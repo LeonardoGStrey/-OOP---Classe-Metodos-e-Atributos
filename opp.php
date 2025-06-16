@@ -62,7 +62,26 @@ $gato->atualizarIndependencia(8);
 $gato->ensinarCaixaAreia();            
 echo $gato->verificarPelagem();        
 echo $gato->verificarContato();        
-echo $gato->resumoGato();             
+echo $gato->resumoGato();   
+
+
+$adotante = new Adotante();
+$adotante->nome = 'Carlos Silva';
+$adotante->idade = 29;
+$adotante->telefone = '(51) 99999-8888';
+$adotante->email = 'carlos@email.com';
+$adotante->endereco = 'Rua das Flores, 123 - Porto Alegre';
+$adotante->temOutrosAnimais = true;
+$adotante->experienciaComPets = 'Sim, já teve dois cães.';
+$adotante->adotarAnimal($animal);
+
+
+echo $adotante->exibirAdotante();
+echo $adotante->verificarIdade();
+echo $adotante->temExperiencia();
+echo $adotante->listarContato();
+echo $adotante->verificarOutrosAnimais();
+echo $adotante->resumoAdotante();
+echo $adotante->cancelarAdocao();
+echo $adotante->resumoAdotante(); 
 ?>
-
-
