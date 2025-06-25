@@ -18,11 +18,11 @@ class Animal {
     }
 
     public function atualizarPeso($peso) {
-        $this->peso = ("$peso) <br>");
+        $this->peso = "$peso <br>";
     }
 
     public function alterarStatus($novoStatus) {
-        $this->status =(" $novoStatus <br>");
+        $this->status = "$novoStatus <br>";
     }
 
     public function verificarIdade() {
@@ -48,7 +48,7 @@ class Animal {
     }
 
     public function verificarSexo() {
-        return ("$this->sexo<br>");
+        return "{$this->sexo}<br>";
     }
 }
 ?>

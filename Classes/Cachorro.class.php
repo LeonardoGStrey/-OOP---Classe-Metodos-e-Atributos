@@ -1,6 +1,7 @@
 <?php
-class Cachorro {
-    public $nome;
+require_once 'Animal.class.php';
+
+class Cachorro extends Animal {
     public $raca;
     public $porte;
     public $nivelEnergia;
@@ -10,7 +11,7 @@ class Cachorro {
     public $adestrado;
 
     public function exibirCachorro() {
-        return "Nome: {$this->nome} <br> 
+        return parent::apresentar() . "
                 Raça: {$this->raca} <br> 
                 Porte: {$this->porte} <br> 
                 Nível de Energia: {$this->nivelEnergia} <br> 
@@ -45,8 +46,7 @@ class Cachorro {
     }
 
     public function resumoCachorro() {
-        return "<br> Nome: Maya, Raça: Vira-lata, Porte: Medio <br><br>";
+        return "<br> Nome: {$this->nome}, Raça: {$this->raca}, Porte: {$this->porte} <br><br>";
     }
 }
-
 ?>

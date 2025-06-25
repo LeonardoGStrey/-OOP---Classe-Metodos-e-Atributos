@@ -51,3 +51,4 @@ class Adotante {
         return "Resumo: Adotante: {$this->nome}, Animal: {$animalNome} <br><br>";
     }
 }
+?>

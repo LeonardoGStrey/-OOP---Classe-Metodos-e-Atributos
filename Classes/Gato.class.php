@@ -1,6 +1,7 @@
 <?php
-class Gato {
-    public $nome;
+require_once 'Animal.class.php';
+
+class Gato extends Animal {
     public $pelagem;
     public $castrado;
     public $independente;
@@ -10,7 +11,7 @@ class Gato {
     public $usaCaixaAreia;
 
     public function exibirGato() {
-        return "Nome: {$this->nome} <br>
+        return parent::apresentar() . "
                 Pelagem: {$this->pelagem} <br>
                 Castrado: " . ($this->castrado ? 'Sim' : 'Não') . "<br>
                 Independência: {$this->independente} <br>
@@ -48,3 +49,4 @@ class Gato {
         return $this->adoraColo ? "<br> Aceita colo" : "Não aceita colo";
     }
 }
+?>
